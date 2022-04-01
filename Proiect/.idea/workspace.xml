@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6cc96fa9-864b-4a0c-ba14-9ea1f23bcc4b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Cinema/Adresa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Cinema/Cinema.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Cinema/Sala.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Comparator/ComparareFilme.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Filme/Film.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Filme/GenFilm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Persoane/Actor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Persoane/Angajat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Persoane/Persoana.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Persoane/Spectator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Servicii/Servicii.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
