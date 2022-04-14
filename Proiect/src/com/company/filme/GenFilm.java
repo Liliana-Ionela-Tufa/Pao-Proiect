@@ -1,4 +1,4 @@
-package Filme;
+package com.company.filme;
 
 import java.util.Random;
 

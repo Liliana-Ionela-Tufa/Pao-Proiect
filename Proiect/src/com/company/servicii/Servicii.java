@@ -1,19 +1,20 @@
-package Servicii;
+package com.company.servicii;
 
-import Cinema.Adresa;
-import Cinema.Cinema;
-import Cinema.Sala;
-import Comparator.ComparareFilme;
-import Filme.Film;
-import Filme.GenFilm;
-import Persoane.Actor;
-import Persoane.Angajat;
-import Persoane.Spectator;
+import com.company.cinema.Adresa;
+import com.company.cinema.Cinema;
+import com.company.cinema.Sala;
+import com.company.comparator.ComparareFilme;
+import com.company.filme.Film;
+import com.company.filme.GenFilm;
+import com.company.persoane.Actor;
+import com.company.persoane.Angajat;
+import com.company.persoane.Spectator;
 
 import java.util.*;
 
 public class Servicii {
 
+    private Adresa adresa;
     private Cinema cinema;
     private final List<Angajat> angajati = new ArrayList<>();
     private final List<Film> filme = new ArrayList<>();
@@ -68,17 +69,36 @@ public class Servicii {
                     break;
                 case 6:
                     GenFilm gen = GenFilm.GenRandom();
+                    System.out.print("S-a ales genul: " + gen +'\n');
                     filmeDupaGen(gen);
                     break;
                 case 7:
-                    int an = in.nextInt();
+                    int an;
+                    while (true) {
+                        System.out.print("An: ");
+                        try {
+                            an = Integer.parseInt(in.next());
+                            break;
+                        } catch (Exception e) {
+                            System.out.println("Trebuie introdus un integer!");
+                        }
+                    }
                     filmeAparuteDupaAn(an);
                     break;
                 case 8:
                     sortareFilmeDupaAn(filme);
                     break;
                 case 9:
-                    int id = in.nextInt();
+                    int id;
+                    while (true) {
+                        System.out.print("Id: ");
+                        try {
+                            id = Integer.parseInt(in.next());
+                            break;
+                        } catch (Exception e) {
+                            System.out.println("Trebuie introdus un integer!");
+                        }
+                    }
                     afisareNrSpectatori(id);
                     break;
                 case 10:
@@ -90,8 +110,18 @@ public class Servicii {
         }
     }
 
-    //Afisare detalii cinema
+
+    //Afisare detalii com.company.cinema
     public void afisareCinema() {
+        Adresa adresa = new Adresa("Romania", "Bucuresti", "Republicii", 23);
+        HashMap<String, Integer> ht1 = new HashMap<>();
+        ht1.put("Luni", 12);
+        ht1.put("Marti", 16);
+        ht1.put("Miercuri", 10);
+        String st = "The batman";
+        String st2 = "Twilight";
+        String st3 = "Meet Joe Black";
+        Cinema cinema = new Cinema(adresa, Set.of(st,st2, st3), ht1);
         System.out.print(cinema.toString());
     }
 
@@ -107,12 +137,19 @@ public class Servicii {
         System.out.print("Nume job: ");
         String numejob = in.nextLine();
 
-        System.out.print("Varsta: ");
-        int varsta = Integer.parseInt(in.nextLine());
-
-        Angajat angajatNou = new Angajat(nume, prenume, varsta, numejob);
-        angajati.add(angajatNou);
-    }
+        int varsta;
+        while (true) {
+            System.out.print("Varsta: ");
+            try {
+                varsta = Integer.parseInt(in.nextLine());
+                break;
+            } catch (Exception e) {
+                System.out.println("Trebuie introdus un integer!");
+            }
+        }
+            Angajat angajatNou = new Angajat(nume, prenume, varsta, numejob);
+            angajati.add(angajatNou);
+        }
 
     public void adaugareFilm() {
         ArrayList<String> numeActori = new ArrayList<>();
@@ -120,22 +157,46 @@ public class Servicii {
         System.out.print("Denumire: ");
         String denumire = in.nextLine();
 
-        System.out.print("Rating: ");
-        int rating = in.nextInt();
+        int rating;
+        while (true) {
+            System.out.print("Rating: ");
+            try {
+                rating = Integer.parseInt(in.next());
+                break;
+            } catch (Exception e) {
+                System.out.println("Trebuie introdus un integer!");
+            }
+        }
 
-        System.out.print("An aparitie: ");
-        int anAparitie = in.nextInt();
+        int anAparitie;
+        while (true) {
+            System.out.print("An aparitie: ");
+            try {
+                anAparitie = Integer.parseInt(in.next());
+                break;
+            } catch (Exception e) {
+                System.out.println("Trebuie introdus un integer!");
+            }
+        }
 
 
         GenFilm gen = GenFilm.GenRandom();
 
-        System.out.print("Nr actori: ");
-        int nrActori = in.nextInt();
+        int nrActori;
+        while (true) {
+            System.out.print("Nr actori: ");
+            try {
+                nrActori = Integer.parseInt(in.next());
+                break;
+            } catch (Exception e) {
+                System.out.println("Trebuie introdus un integer!");
+            }
+        }
 
         System.out.print("introduceti numele actorilor: ");
 
         for (int i = 0; i < nrActori; i++) {
-            String nume = in.nextLine();
+            String nume = in.next();
             numeActori.add(nume);
         }
 
@@ -160,7 +221,7 @@ public class Servicii {
     }
 
 
-    //Afisare nume filme de acelasi gen
+    //Afisare nume com.company.filme de acelasi gen
     public void filmeDupaGen(GenFilm gen) {
         for (Film film : filme) {
             if (film.getGen() == gen)
@@ -169,7 +230,7 @@ public class Servicii {
         }
     }
 
-    //Afisare nume filme care au aparut dupa un anumit an
+    //Afisare nume com.company.filme care au aparut dupa un anumit an
     public void filmeAparuteDupaAn(int an) {
         for (Film film : filme) {
             if (film.getAnAparitie() > an)
@@ -197,6 +258,7 @@ public class Servicii {
 
     //Setare o noua adresa
     public void setareAdresa() {
+
         Scanner in = new Scanner(System.in);
         System.out.print("Tara: ");
         String tara = in.nextLine();
@@ -207,16 +269,25 @@ public class Servicii {
         System.out.print("Strada: ");
         String strada = in.nextLine();
 
-        System.out.print("Numar: ");
-        int nr = in.nextInt();
+        int nr;
+        while (true) {
+            System.out.print("Numar: ");
+            try {
+                nr = Integer.parseInt(in.next());
+                break;
+            } catch (Exception e) {
+                System.out.println("Trebuie introdus un integer!");
+            }
+        }
+
         System.out.print("\n");
+        adresa.setTara(tara);
+        adresa.setOras(oras);
+        adresa.setStrada(strada);
+        adresa.setNumar(nr);
 
-        cinema.getAdresa().setTara();
-        cinema.getAdresa().setOras(oras);
-        cinema.getAdresa().setStrada(strada);
-        cinema.getAdresa().setNumar(nr);
-
-        cinema.getAdresa().toString();
+        cinema.setAdresa(adresa);
+        cinema.toString();
     }
 
     public void initializare(){
@@ -231,10 +302,6 @@ public class Servicii {
         spectatori.add(s);
         spectatori.add(ss);
 
-        Sala s1 = new Sala(23, 50, "The Batman");
-        Sala s2 = new Sala(14, 100, "Twilight");
-        sali.add(s1);
-        sali.add(s2);
 
         String a1 = "Robert Pattinson";
         String a2 = "Zoe Kravitz";
@@ -242,6 +309,11 @@ public class Servicii {
 
         String a3 = "Kristen Stewart";
         Film f2 = new Film("Twilight", 10, 2008, GenFilm.ROMANTIC, List.of(a1, a3));
+
+        Sala s1 = new Sala(23, 50, f1);
+        Sala s2 = new Sala(14, 100,f2 );
+        sali.add(s1);
+        sali.add(s2);
 
         String a4 = "Brad Pitt";
         String a5 = "Claire Forlani";
@@ -257,7 +329,7 @@ public class Servicii {
         actori.add(act1);
 
         Adresa adresa = new Adresa("Romania", "Bucuresti", "Republicii", 23);
-        Hashtable<String, Integer> ht1 = new Hashtable<>();
+        HashMap<String, Integer> ht1 = new HashMap<>();
         ht1.put("Luni", 12);
         ht1.put("Marti", 16);
         ht1.put("Miercuri", 10);

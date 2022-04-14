@@ -1,8 +1,8 @@
-package Persoane;
+package com.company.persoane;
 
 public class Persoana {
-    protected String nume, prenume;
-    protected int varsta;
+    private String nume, prenume;
+    private int varsta;
 
     public Persoana(){
     }

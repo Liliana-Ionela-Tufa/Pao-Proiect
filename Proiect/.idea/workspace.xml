@@ -2,7 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6cc96fa9-864b-4a0c-ba14-9ea1f23bcc4b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/company/persoane/Angajat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/untitled.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proiect/Cinema/Adresa.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proiect/Cinema/Adresa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proiect/Cinema/Cinema.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proiect/Cinema/Cinema.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proiect/Cinema/Sala.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proiect/Cinema/Sala.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proiect/Comparator/ComparareFilme.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proiect/Comparator/ComparareFilme.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proiect/Filme/Film.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proiect/Filme/Film.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proiect/Filme/GenFilm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proiect/Filme/GenFilm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proiect/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proiect/Persoane/Actor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proiect/Persoane/Actor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proiect/Persoane/Angajat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proiect/Persoane/Angajat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proiect/Persoane/Persoana.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proiect/Persoane/Persoana.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proiect/Persoane/Spectator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proiect/Persoane/Spectator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Proiect/Servicii/Servicii.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Proiect/Servicii/Servicii.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cinema/Adresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/cinema/Adresa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cinema/Cinema.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/cinema/Cinema.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cinema/Sala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/cinema/Sala.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Comparator/ComparareFilme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/comparator/ComparareFilme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Filme/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/filme/Film.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Filme/GenFilm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/filme/GenFilm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persoane/Actor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/persoane/Actor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persoane/Angajat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persoane/Persoana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/persoane/Persoana.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persoane/Spectator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/persoane/Spectator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Servicii/Servicii.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/servicii/Servicii.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,21 +118,31 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.ignored.files" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.company" />
+      <recent name="" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Main (1)">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Proiect" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <module name="Proiect" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <module name="Proiect" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

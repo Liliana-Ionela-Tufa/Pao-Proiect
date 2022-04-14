@@ -1,6 +1,6 @@
-package Persoane;
+package com.company.persoane;
 
-import Filme.Film;
+import com.company.filme.Film;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,9 +13,9 @@ public class Actor extends Persoana{
     }
 
     public Actor(String nume, String prenume, int varsta, int rating, List<Film> filme) {
-        this.nume = nume;
-        this.prenume = prenume;
-        this.varsta = varsta;
+        this.setNume(nume);
+        this.setPrenume(prenume);
+        this.setVarsta(varsta);
         this.rating = rating;
         this.filme = filme;
 
@@ -39,8 +39,8 @@ public class Actor extends Persoana{
 
     @Override
     public String toString(){
-        String output =  "nume: " + nume + '\n';
-        output += "pretume: " + prenume + '\n';
+        String output =  "nume: " + getNume() + '\n';
+        output += "pretume: " + getPrenume() + '\n';
         output += " rating: " + rating + '\n';
         output += " Fime: " + filme.toString();
 

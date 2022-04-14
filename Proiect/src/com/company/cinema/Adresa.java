@@ -1,4 +1,4 @@
-package Cinema;
+package com.company.cinema;
 
 public class Adresa {
     private String tara, oras, strada;
@@ -18,7 +18,7 @@ public class Adresa {
         return tara;
     }
 
-    public void setTara() {
+    public void setTara(String tara) {
         this.tara = tara;
     }
 

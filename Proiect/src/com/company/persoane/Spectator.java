@@ -1,4 +1,4 @@
-package Persoane;
+package com.company.persoane;
 
 public class Spectator extends Persoana{
     private int nrSala, nrLoc;
@@ -7,9 +7,9 @@ public class Spectator extends Persoana{
     }
 
     public Spectator(String nume, String prenume, int varsta, int nrSala, int nrLoc) {
-        this.nume = nume;
-        this.prenume = prenume;
-        this.varsta = varsta;
+        this.setNume(nume);
+        this.setPrenume(prenume);
+        this.setVarsta(varsta);
         this.nrSala = nrSala;
         this.nrLoc = nrLoc;
     }
@@ -32,9 +32,9 @@ public class Spectator extends Persoana{
 
     @Override
     public String toString(){
-        String output =  "nume: " + nume + '\n';
-        output += " prenume: " + prenume + '\n';
-        output += " varsta: " + varsta + '\n';
+        String output =  "nume: " + getNume() + '\n';
+        output += " prenume: " + getPrenume() + '\n';
+        output += " varsta: " + getVarsta() + '\n';
         output += " sala: " + nrSala + '\n';
         output += " numar loc: " + nrLoc;
 
