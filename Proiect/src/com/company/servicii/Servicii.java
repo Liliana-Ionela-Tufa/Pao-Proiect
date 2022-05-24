@@ -21,6 +21,8 @@ public class Servicii {
     private final List<Sala> sali = new ArrayList<>();
     private final List<Spectator> spectatori = new ArrayList<>();
     private final List<Actor> actori = new ArrayList<>();
+    private final ScrieFisier scrieFisier = ScrieFisier.getInstance();
+    private final AuditServiciu auditServiciu = AuditServiciu.getInstance();
 
 
 
@@ -127,35 +129,48 @@ public class Servicii {
 
     //Adaugare angajat nou
     public void adaugareAngajat() {
+        ArrayList<String> list = new ArrayList<>();
+
         Scanner in = new Scanner(System.in);
+
         System.out.print("Nume: ");
         String nume = in.nextLine();
+        list.add(nume);
 
         System.out.print("Prenume: ");
         String prenume = in.nextLine();
+        list.add(prenume);
 
-        System.out.print("Nume job: ");
-        String numejob = in.nextLine();
 
         int varsta;
         while (true) {
             System.out.print("Varsta: ");
             try {
                 varsta = Integer.parseInt(in.nextLine());
+                list.add(String.valueOf(varsta));
                 break;
             } catch (Exception e) {
                 System.out.println("Trebuie introdus un integer!");
             }
         }
-            Angajat angajatNou = new Angajat(nume, prenume, varsta, numejob);
-            angajati.add(angajatNou);
+        System.out.print("Nume job: ");
+        String numejob = in.nextLine();
+        list.add(numejob);
+
+        Angajat angajatNou = new Angajat(nume, prenume, varsta, numejob);
+        angajati.add(angajatNou);
+
+        scrieFisier.scrieF("src\\com\\company\\data\\angajat.csv", list);
+        auditServiciu.logCommand("adaugare angajat");
         }
 
     public void adaugareFilm() {
+        ArrayList<String> list = new ArrayList<>();
         ArrayList<String> numeActori = new ArrayList<>();
         Scanner in = new Scanner(System.in);
         System.out.print("Denumire: ");
         String denumire = in.nextLine();
+        list.add(denumire);
 
         int rating;
         while (true) {
@@ -167,6 +182,7 @@ public class Servicii {
                 System.out.println("Trebuie introdus un integer!");
             }
         }
+        list.add(String.valueOf(rating));
 
         int anAparitie;
         while (true) {
@@ -178,9 +194,10 @@ public class Servicii {
                 System.out.println("Trebuie introdus un integer!");
             }
         }
-
+        list.add(String.valueOf(anAparitie));
 
         GenFilm gen = GenFilm.GenRandom();
+        list.add(String.valueOf(gen));
 
         int nrActori;
         while (true) {
@@ -200,8 +217,12 @@ public class Servicii {
             numeActori.add(nume);
         }
 
+        list.add(String.valueOf(numeActori));
         Film filmNou = new Film(denumire, rating, anAparitie, gen, numeActori);
         filme.add(filmNou);
+
+        scrieFisier.scrieF("src\\com\\company\\data\\film.csv", list);
+        auditServiciu.logCommand("adaugare film");
 
     }
 
@@ -290,6 +311,50 @@ public class Servicii {
         cinema.toString();
     }
 
+    public void adaugareDate() {
+        CitireFisier citireFisier = CitireFisier.getInstance();
+        /*
+        //sala.csv
+        List<String[]> fisierC = citireFisier.citireF("src\\com\\company\\data\\sala.csv");
+        for (String[] linie : fisierC) {
+            int idSala = Integer.parseInt(linie[0]);
+            int nrSpectatori = Integer.parseInt(linie[1]);
+
+        } */
+
+        //spectator.csv
+        List<String[]> fisierC = citireFisier.citireF("src\\com\\company\\data\\spectator.csv");
+        for (String[] linie : fisierC) {
+            Spectator spectator = new Spectator(linie[0], linie[1], Integer.parseInt(linie[2]), Integer.parseInt(linie[3]), Integer.parseInt(linie[4]));
+            spectatori.add(spectator);
+        }
+
+        //angajat.csv
+        fisierC = citireFisier.citireF("src\\com\\company\\data\\angajat.csv");
+        for(String[] linie : fisierC){
+            Angajat angajat = new Angajat(linie[0], linie[1], Integer.parseInt(linie[2]), linie[3]);
+            angajati.add(angajat);
+        }
+
+        //film.csv
+        fisierC = citireFisier.citireF("src\\com\\company\\data\\film.csv");
+        for(String[] linie : fisierC){
+            String denumire = linie[0];
+            int rating = Integer.parseInt(linie[1]);
+            int anAparitie = Integer.parseInt(linie[2]);
+            GenFilm gen = GenFilm.valueOf(linie[3]);
+
+            String actor = String.valueOf(linie[4]);
+
+            Film film = new Film(denumire, rating, anAparitie, gen, List.of(actor));
+            filme.add(film);
+        }
+
+
+
+
+
+    }
     public void initializare(){
 
         Angajat a = new Angajat("Mircea", "Maria", 30, "Vanzator bilete");
