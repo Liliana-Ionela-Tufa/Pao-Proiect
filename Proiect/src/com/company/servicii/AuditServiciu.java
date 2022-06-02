@@ -21,6 +21,6 @@ public class AuditServiciu {
         ArrayList<String> fisierAudit = new ArrayList<String>();
         fisierAudit.add(numeActiune);
         fisierAudit.add(String.valueOf(timestamp));
-        scrieFisier.scrieF("src\\com\\company\\data\\audit.csv", fisierAudit);
+        scrieFisier.scrieF("C:\\pao\\Pao-Proiect\\Proiect\\src\\com\\company\\data\\audit.csv", fisierAudit);
     }
 }
